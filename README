@@ -1,7 +1,7 @@
 This is a simple project used as a public built-in calculator for other projects.
 To use in an outside source, use code similar to below.
 
->>> import parser
+`import parser`
 >>> result = parser.parse(script, ID) # script passed should be string, ID is any hashable identifier for a user (pass None for global use)
 
 This will allow the user to store their own variables and will be uneffected by other users. If you need to get the value set for anyone's variables, use:
