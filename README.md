@@ -18,30 +18,35 @@ If you need to get the value set for anyone's variables, use:
 A combination of any of the below may be used in the given script - all white space is ignored.
 
 Base operations:
-
-`num + num`
-`num - num`
-`num * num`
-`num / num`
-`num ** num`
-`num ( num ) # same as "num * num"`
-`num e int # same as "num * 10 ** int"`
+``` py
+num + num
+num - num
+num * num
+num / num
+num ** num
+num ( num ) # same as "num * num"
+num e int # same as "num * 10 ** int"
+```
 
 Base comparators:
-```
->>> num == num
->>> num != num
->>> num < num
->>> num <= num
->>> num > num
->>> num >= num
+``` py
+num == num
+num != num
+num < num
+num <= num
+num > num
+num >= num
 ```
 
 Built-in mathematical functions:
->>> sqrt ( num )
->>> exp ( num ) # exponent 
->>> log ( num ) # natural log
+``` py
+sqrt ( num )
+exp ( num ) # exponent 
+log ( num ) # natural log
+```
 
 Setters and getters:
->>> var_name = num
->>> var_name # returns the value stored in var_name, and can be used in other operators, comparators, setters, and functions, etc. in place of a num
+``` py
+var_name = num
+var_name # returns the value stored in var_name, and can be used in other operators, comparators, setters, and functions, etc. in place of a num
+```
