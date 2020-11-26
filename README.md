@@ -4,14 +4,14 @@ This is a simple project used as a public built-in calculator for other projects
 
 ### Example usage
 ```
->>> import parser
->>> result = parser.parse(script, ID) # script passed should be string, ID is any hashable identifier for a user (pass None for global use)
+import parser
+result = parser.parse(script, ID) # script passed should be string, ID is any hashable identifier for a user (pass None for global use)
 ```
 This will allow the user to store their own variables and will be uneffected by other users. 
 
 If you need to get the value set for anyone's variables, use:
 ```
->>> parser.env[ID].get(variable_name) # assuming user with ID has used the parser at all
+parser.env[ID].get(variable_name) # assuming user with ID has used the parser at all
 ```
 
 ### Functionality
