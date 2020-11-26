@@ -5,9 +5,9 @@ This is a simple project used as a public built-in calculator for other projects
 ### Example usage
 ```
 import parser
-result = parser.parse(script, ID) # script passed should be string, ID is any hashable identifier for a user (pass None for global use)
+result = parser.parse(script, ID)
 ```
-This will allow the user to store their own variables and will be uneffected by other users. 
+Note: The `script` passed should be `str`, and `ID` may be any hashable identifier for a user (may be ignored for global use). Passing `ID` to the parser allows users to assign values to variables without overlap. 
 
 If you need to get the value set for anyone's variables, use:
 ```
