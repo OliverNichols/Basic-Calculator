@@ -19,13 +19,13 @@ A combination of any of the below may be used in the given script - all white sp
 
 Base operations:
 
-`>>> num + num`
-`>>> num - num`
->>> num * num
->>> num / num
->>> num ** num
->>> num ( num ) # same as "num * num"
->>> num e int # same as "num * 10 ** int"
+`num + num`
+`num - num`
+`num * num`
+`num / num`
+`num ** num`
+`num ( num ) # same as "num * num"`
+`num e int # same as "num * 10 ** int"`
 
 Base comparators:
 ```
