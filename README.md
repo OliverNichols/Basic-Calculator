@@ -1,8 +1,8 @@
-### Calculator
+## Calculator
 
 This is a simple project used as a public built-in calculator for other projects.
 
-# Example usage
+### Example usage
 ```
 >>> import parser
 >>> result = parser.parse(script, ID) # script passed should be string, ID is any hashable identifier for a user (pass None for global use)
@@ -14,11 +14,11 @@ If you need to get the value set for anyone's variables, use:
 >>> parser.env[ID].get(variable_name) # assuming user with ID has used the parser at all
 ```
 
-# Functionality
+### Functionality
 A combination of any of the below may be used in the given script - all white space is ignored.
 
 Base operations:
->>> num + num
+`>>> num + num`
 >>> num - num
 >>> num * num
 >>> num / num
@@ -27,12 +27,14 @@ Base operations:
 >>> num e int # same as "num * 10 ** int"
 
 Base comparators:
+```
 >>> num == num
 >>> num != num
 >>> num < num
 >>> num <= num
 >>> num > num
 >>> num >= num
+```
 
 Built-in mathematical functions:
 >>> sqrt ( num )
