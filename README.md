@@ -18,8 +18,9 @@ If you need to get the value set for anyone's variables, use:
 A combination of any of the below may be used in the given script - all white space is ignored.
 
 Base operations:
+
 `>>> num + num`
->>> num - num
+`>>> num - num`
 >>> num * num
 >>> num / num
 >>> num ** num
