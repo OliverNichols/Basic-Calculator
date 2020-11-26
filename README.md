@@ -48,5 +48,5 @@ log ( num ) # natural log
 Setters and getters:
 ``` py
 var_name = num
-var_name # returns the value stored in var_name, and can be used in other operators, comparators, setters, and functions, etc. in place of a num
+var_name # returns the value stored in var_name
 ```
