@@ -15,7 +15,6 @@ COMPARATORS = {
     '<': operator.lt, 
     '>=': operator.ge, 
     '<=': operator.le,
-    '=': operator.eq,
     '==': operator.eq, 
     '!=': operator.ne
 }
@@ -211,16 +210,17 @@ env = {}
 
 def run(p):
     if isinstance(p, tuple):
-        if (op := OPERATORS.get(p[0])): return op (run(p[1]), run(p[2]))
+        if p[0] == '=': env[current_id][p[1]] = (v:=run(p[2])); return f"Set variable `{p[1]}` to `{v}`"
+        elif (op := OPERATORS.get(p[0])): return op (run(p[1]), run(p[2]))
         elif (cp := COMPARATORS.get(p[0])): return cp (run(p[1]), run(p[2]))
+        elif p[0] == 'var':
+            try: return env[current_id][p[1]]
+            except: raise ValueError(f"`{p[1]}` has no value set")
         else:
             if p[0] == 'sqrt': return operator.pow(run(p[1]), 1/2)
             elif p[0] == 'exp': return math.exp(run(p[1]))
             elif p[0] == 'log': return math.log(run(p[1]))
-            elif p[0] == '=': env[current_id][p[1]] = (v:=run(p[2])); return f"Set variable `{p[1]}` to `{v}`"
-            elif p[0] == 'var':
-                try: return env[current_id][p[1]]
-                except: raise ValueError(f"`{p[1]}` has no value set")
+            
             else: return p
 
     else: return p
